@@ -6,7 +6,7 @@ import numpy
 import datetime
 
 
-numEachFruit = 10   # number of each fruit
+numEachFruit = 10   # number of each fruit test
 numFruits = 4
 dnarray = []
 
