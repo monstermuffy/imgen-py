@@ -11,3 +11,6 @@ fruitname just means one group of assets which will all fit together, ie. all ba
 we then have each property (eyes, mouths, legs etc.) in the "fruitname_property" folder, ie. banana/arms
 
 in each fruitname_property folder we have each png asset, all assets must end in #100.png where 100 is the relative rarity, ie. banana_sword#20.png
+
+
+might need to pip install pillow
