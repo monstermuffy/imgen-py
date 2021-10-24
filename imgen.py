@@ -4,11 +4,14 @@ import os
 from random import randrange
 import numpy
 import datetime
+import json
 
+# cumquat was here
 
-numEachFruit = 10   # number of each fruit test
-numFruits = 4
+numEachFruit = 1   # number of each fruit test
+numFruits = 6
 dnarray = []
+unrevealedIPFSlink = "ipfs://Qmefk8tH36QXoBNSGGAxoc8EtfPC122TH4Xa2zTVaoUbgr"
 
 def getProperties(fruit): # return an array of the properties for each fruit, len(getProperties) for number of properties
     tempProp = []
@@ -74,10 +77,43 @@ def cleanImageFolder():
             continue
         os.remove(os.path.join(Path('./images'), f))
 
+def cleanMetadataFolder():
+    for f in os.listdir(Path('./metadata')):
+        if not f.endswith(".json"):
+            continue
+        os.remove(os.path.join(Path('./metadata'), f))
+
+def createMetadata(dna, edition):
+    tempDic = []
+    dic = {
+        "name": ("Fruity Booty #" + str(edition)),
+        "image": (unrevealedIPFSlink)
+    }
+    for i in range(1, len(dna)):
+            chosen = ""
+            pathTo = Path('./assets/' + (os.listdir(Path('./assets'))[dna[0]]))
+            attributeCategory = os.listdir(pathTo)[i-1].split("_")[1]
+            pathTo = os.path.join(pathTo, Path(os.listdir(pathTo)[i-1]))
+            if i == 1:
+                chosenAttribute = (os.listdir(pathTo)[dna[i]]).split("#")[0]
+            else:
+                chosenAttribute = (os.listdir(pathTo)[dna[i]].split("_")[1]).split("#")[0]
+            tempDic2 = {
+                "trait_type": attributeCategory,
+                "value": chosenAttribute
+            }
+            tempDic.append(tempDic2)
+
+    dic["attributes"] = tempDic
+    with open('metadata/' + str(edition) + '.json', 'w') as f:
+        json.dump(dic, f)            
+
 def createFruit():
     cleanImageFolder()
+    cleanMetadataFolder()
     edition = 1
     for dna in dnarray:
+        createMetadata(dna, edition)
         tempDNA = dna
         base = Image
         tempImg = Image
@@ -92,14 +128,18 @@ def createFruit():
             else:
                 tempImg = Image.open(Path(pathTo)).convert("RGBA")
                 x, y = tempImg.size
-                base.paste(tempImg, (0, 0, x, y), tempImg)
-        base.save(Path('./images/Fruity Booty #'+ str(edition) + '.png'), "PNG")
+                base = Image.alpha_composite(base, tempImg)
+            #base.show()                                 # cool thing showing creation in real time
+        base.save(Path('./images/'+ str(edition) + '.png'), "PNG")
         edition += 1
         print("creating fruity booty #" + str(edition - 1))
+
+
 
 timeStart = datetime.datetime.now()
 createFruit()
 timeEnd = datetime.datetime.now()
 
 timeTaken = timeEnd-timeStart
-print(timeTaken*300)
+a = 12000/(numFruits*numEachFruit)
+print(timeTaken*a)

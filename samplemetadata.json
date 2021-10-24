@@ -1,0 +1,37 @@
+{
+    "name": "CryptoMom #6942",
+    "image": "ipfs://bafybeiao53abkdfpkdtrtxdumt3vn3al6q3cnb7hyzjnqep4milymr6kgi/6942.png",
+    "attributes": [{
+            "trait_type": "Background",
+            "value": "Snow"
+        },
+        {
+            "trait_type": "Clothes",
+            "value": "Hippie Tee"
+        },
+        {
+            "trait_type": "Complexion",
+            "value": "Golden"
+        },
+        {
+            "trait_type": "Eyebrows",
+            "value": "Eyebrows"
+        },
+        {
+            "trait_type": "Eyes",
+            "value": "Brown Eye Shadow"
+        },
+        {
+            "trait_type": "Facial Jewelry",
+            "value": "Nose Ring"
+        },
+        {
+            "trait_type": "Hair",
+            "value": "Black Long Curls"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "Black Lipstick"
+        }
+    ]
+}
