@@ -129,43 +129,5 @@ dmypy.json
 .pyre/
 
 images/
-images/Fruity Booty #1.png
-images/Fruity Booty #2.png
-images/Fruity Booty #3.png
-images/Fruity Booty #4.png
-images/Fruity Booty #5.png
-images/Fruity Booty #6.png
-images/Fruity Booty #7.png
-images/Fruity Booty #8.png
-images/Fruity Booty #9.png
-images/Fruity Booty #10.png
-images/Fruity Booty #11.png
-images/Fruity Booty #12.png
-images/Fruity Booty #13.png
-images/Fruity Booty #14.png
-images/Fruity Booty #15.png
-images/Fruity Booty #16.png
-images/Fruity Booty #17.png
-images/Fruity Booty #18.png
-images/Fruity Booty #19.png
-images/Fruity Booty #20.png
-images/Fruity Booty #21.png
-images/Fruity Booty #22.png
-images/Fruity Booty #23.png
-images/Fruity Booty #24.png
-images/Fruity Booty #25.png
-images/Fruity Booty #26.png
-images/Fruity Booty #27.png
-images/Fruity Booty #28.png
-images/Fruity Booty #29.png
-images/Fruity Booty #30.png
-images/Fruity Booty #31.png
-images/Fruity Booty #32.png
-images/Fruity Booty #33.png
-images/Fruity Booty #34.png
-images/Fruity Booty #35.png
-images/Fruity Booty #36.png
-images/Fruity Booty #37.png
-images/Fruity Booty #38.png
-images/Fruity Booty #39.png
-images/Fruity Booty #40.png
+metadata/
+fixedMetadata/
