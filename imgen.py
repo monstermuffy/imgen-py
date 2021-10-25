@@ -8,7 +8,7 @@ import json
 
 # cumquat was here
 
-numEachFruit = 1   # number of each fruit test
+numEachFruit = 5   # number of each fruit test
 numFruits = 6
 dnarray = []
 unrevealedIPFSlink = "ipfs://Qmefk8tH36QXoBNSGGAxoc8EtfPC122TH4Xa2zTVaoUbgr"

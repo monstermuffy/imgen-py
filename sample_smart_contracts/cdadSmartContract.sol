@@ -92,7 +92,10 @@ contract CryptoDads is ERC721Enumerable, Ownable {
         require(amountOfDads > 0, "Must mint at least one dad");
         require(PRICE * amountOfDads == msg.value, "ETH amount is incorrect");
 
-        for (uint256 i = 0; i < amountOfDads; i++) {
+
+
+
+     for (uint256 i = 0; i < amountOfDads; i++) {
             uint256 tokenId = numDadsMinted + 1;
 
             numDadsMinted += 1;

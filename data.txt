@@ -1,1 +1,0 @@
-"{\"background\": \"Gobstopper\", \"bodys\": \"default\", \"eyes\": \"cucumbereyes\", \"feet\": \"redsneakers\", \"hands\": \"boxingglove\", \"hats\": \"knifeinhead\", \"mouth\": \"redlips\"}"
